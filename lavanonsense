@@ -1,0 +1,1633 @@
+local function rgbToHex(rgb)
+local hexadecimal = '0X'
+for key, value in pairs(rgb) do
+   local hex = ''
+   while(value > 0)do
+local index = math.fmod(value, 16) + 1
+value = math.floor(value / 16)
+hex = string.sub('0123456789ABCDEF', index, index) .. hex
+end
+if(string.len(hex) == 0)then
+hex = '00'
+elseif(string.len(hex) == 1)then
+hex = '0' .. hex
+end
+hexadecimal = hexadecimal .. hex
+end
+return hexadecimal
+end
+
+local Headers = {["content-type"] = "application/json"} 
+local Chat = game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.ChatChannelParentFrame["Frame_MessageLogDisplay"].Scroller
+
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Rainbow Dogcat'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = SecretHatchPing,["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805035041197260830/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Lovely Raven'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/809963302603587624/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Mythic 'Lovely Raven'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/815114459408367626/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Darkness Rose'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/809963507931152424/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Mythic 'Darkness Rose'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/815114698844012555/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Chocolate Gift'") then
+       local TextColor3 = instance.TextLabel.TextColor3
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/809963661812039691/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Mythic 'Chocolate Gift'") then
+       local TextColor3 = instance.TextLabel.TextColor3
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/815114847804194816/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Lovely Rose'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = SecretHatchPing,["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/809963730070142986/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Mythic 'Lovely Rose'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = SecretHatchPing,["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/813248445703913492/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Shattered Soul'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = SecretHatchPing,["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/809963857367138344/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Mythic 'Shattered Soul'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = SecretHatchPing,["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/813248627517423646/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Heart Split'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/809964124409692170/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Mythic 'Heart Split'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/815115134640717834/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Love Soul'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/809964213275590666/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Mythic 'Love Soul'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/815115214738423828/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Harmonic Harp'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = SecretHatchPing,["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/809964341960900618/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Mythic 'Harmonic Harp'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = SecretHatchPing,["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/813248740365697024/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text, "Legendary 'Love Thief'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = SecretHatchPing,["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/809964456637104148/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text, "Mythic 'Love Thief'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = SecretHatchPing,["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/813248914626969600/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'King Doggy'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = SecretHatchPing,["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805015715345858570/latest.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Green Hydra'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805016630656368650/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Demonic Hydra'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805016611496001546/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'The Overlord'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = SecretHatchPing,["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805016564071399474/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Jelly Overlord'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805018368834273290/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Jelly Dualcorn'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805018389411266600/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Dogcat'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = SecretHatchPing,["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805018313280323594/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Frost Dominus'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805019703810326549/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Dominus Hydra'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805019726535196672/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'The OwOlord'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = SecretHatchPing,["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805019645567696916/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Angler Fish'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805020762339147796/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Jelly Fish'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805020781095813150/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Sea Star'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = SecretHatchPing,["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805020646727876608/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Giant Pearl'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = SecretHatchPing,["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805022636283133992/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Sea Phoenix'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805022699621449728/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Sea Cube'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805022731191189514/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Gryphon'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = SecretHatchPing,["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805024934765002762/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Ancient Elemental'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805025113509462056/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Ancient Hydra'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805025158351683594/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Cerberus'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805025138822086726/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Rainbow Serpent'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805035091750551552/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Pixie'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805035117067370496/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Rainbow Gryphon'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = SecretHatchPing,["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805036557081509888/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Fancy Serpent'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805036620239732736/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Fancy Winged Hydra'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805036653127008298/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Fallen Angel'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = SecretHatchPing,["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805037520403300372/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Crystal Hippogriff'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805037592059838464/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Fire King'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805037570203451402/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Earth Champion'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = SecretHatchPing,["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805038539308924958/420.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Dark Champion'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = SecretHatchPing,["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805038470615400468/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Fire Champion'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = SecretHatchPing,["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805038513652236308/420.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Sky Champion'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = SecretHatchPing,["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805038565922439190/420.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Fox Mutant'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805039738514964530/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Wraith'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805039759508504576/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Prisma'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805039715207610378/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Eternal Star'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = SecretHatchPing,["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805040495385378846/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'King Mush'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = SecretHatchPing,["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805040582761381898/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Demon Snake'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805040622909521980/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Demilord'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805040599949377586/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Spore Serpent'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805040642748317706/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Crystal Teddy'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = SecretHatchPing,["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805041132962578432/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Mythic 'Crystal Teddy'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = SecretHatchPing,["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/813249112740069396/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Pastel Hexarium'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805041334468870154/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Mythic 'Pastel Hexarium'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/815115425762902056/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Abyss'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805041435027701800/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Mythic 'Abyss'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/815115540082851870/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Pastel Phoenix'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/805041606390186004/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Mythic 'Pastel Phoenix'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text,
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/815115809553907752/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'ObscureEntity'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = SecretHatchPing,["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text.." (0.0001%)",
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/809534926780235786/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'sircfenner'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text.." (0.005%)",
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/809535294960435241/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
+ 
+Chat.ChildAdded:Connect(function(instance)
+   if string.find(instance.TextLabel.Text,"Legendary 'Blue Circlet'") then
+       local OSTime = os.time();
+       local Time = os.date('!*t', OSTime);
+       local eggs = game.Players.LocalPlayer.leaderstats["Eggs Opened"].Value;
+       timestamp = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec);
+       local TextColor3 = instance.TextLabel.TextColor3
+       local RGB = {TextColor3.R*255,TextColor3.G*255,TextColor3.B*255}
+       local Hex = tonumber(rgbToHex({RGB[1],RGB[2],RGB[3]}))
+       local Info = {["content"] = "",["embeds"] = {{["author"] = {["name"] = username, ["icon_url"] = icon, ["url"] = "https://www.roblox.com/users/"..userid.."/profile"  },
+                                                     ["title"] = instance.TextLabel.Text.." (0.01%)",
+                                                     ["color"] = Hex,
+                                                     ["footer"] = { ["text"] = executename.."'s Egg Count: "..eggs },
+                                                     ["timestamp"] = timestamp,
+                                                     ["thumbnail"] = { ["url"] = "https://cdn.discordapp.com/attachments/749822808288395354/809535082226253834/310.png" },
+                                                     ["fields"] = {}},}}
+       local Info = game:GetService("HttpService"):JSONEncode(Info)
+       local HttpRequest = http_request;
+       if syn then HttpRequest = syn.request else HttpRequest = http_request end
+           HttpRequest({Url=_G.Webhook, Body=Info, Method="POST", Headers=Headers})
+   end
+end)
